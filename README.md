@@ -12,11 +12,19 @@
     <div>
         <h2> Meus focos principais no estudo 📓 </h2>
         <ul>
-            <li><img alt="Static Badge" src="https://img.shields.io/badge/HTML-blue?style=for-the-badge"> <img alt="Static Badge" src="https://img.shields.io/badge/CSS-orange?style=for-the-badge"></li>
-            <li><img alt="Static Badge" src="https://img.shields.io/badge/Python-yellow?style=for-the-badge"></li>
-            <li><img alt="Static Badge" src="https://img.shields.io/badge/Java-purple?style=for-the-badge"></li>
-            <li><img alt="Static Badge" src="https://img.shields.io/badge/bash-4EAA25?style=for-the-badge"></li>
-            <li><img alt="Static Badge" src="https://img.shields.io/badge/Git-F05032?style=for-the-badge"></li>
+            <li><img align=top alt="Static Badge" src="https://img.shields.io/badge/HTML-blue?style=for-the-badge"><img align=top alt="Static Badge" src="https://img.shields.io/badge/CSS-orange?style=for-the-badge"></li>
+        </ul>
+        <ul>
+            <li><img align=top alt="Static Badge" src="https://img.shields.io/badge/Python-yellow?style=for-the-badge"></li>
+        </ul>
+        <ul>
+            <li><img align=top alt="Static Badge" src="https://img.shields.io/badge/Java-purple?style=for-the-badge"></li>
+        </ul>
+        <ul>
+            <li><img align=top alt="Static Badge" src="https://img.shields.io/badge/bash-4EAA25?style=for-the-badge"></li>
+        </ul>
+        <ul>
+            <li><img align=top alt="Static Badge" src="https://img.shields.io/badge/Git-F05032?style=for-the-badge"></li>
         </ul>
     </div>
     <div>
