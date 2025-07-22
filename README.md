@@ -37,7 +37,7 @@
     <div>
         <h2> Projetos em andamento 📁 </h2>
         <ul>
-            <li><a href="https://www.instagram.com/sinara.oficial/"><img align=middle alt="Chirivia" src="https://tinyurl.com/2hekfv9e></a></li>
+            <li><a href="https://www.instagram.com/sinara.oficial/"><img align=middle alt="Chirivia" src="https://tinyurl.com/2hekfv9e"></a></li>
         </ul>
     </div>
     <div>
