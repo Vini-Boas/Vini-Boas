@@ -32,7 +32,7 @@
     <div>
         <h2> Minhas estatísticas GitHub ⚙️</h2>
         <img alt="Estátisticas super cool" src="https://github-readme-stats.vercel.app/api?username=Vini-Boas&show_icons=true&title_color=ebf1f7&text_color=ebf1f7&icon_color=c7424b&bg_color=0d1117&border_color=0d1117&locale=pt-br">
-        <img align=middle alt="Estátisticas super cool" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Vini-Boas&title_color=ebf1f7&text_color=ebf1f7&bg_color=0d1117&border_color=0d1117&locale=pt-br&layout=compact">
+        <img align="top" alt="Estátisticas super cool" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Vini-Boas&title_color=ebf1f7&text_color=ebf1f7&bg_color=0d1117&border_color=0d1117&locale=pt-br&layout=compact">
     </div>
     <div>
         <h2> Projetos em andamento 📁 </h2>
