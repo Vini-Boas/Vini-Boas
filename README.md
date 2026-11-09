@@ -1,48 +1,87 @@
-<img width=100% src="https://capsule-render.vercel.app/api?type=waving&height=120&color=681c22&reversal=false">
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=120&color=681c22&reversal=false"/>
 
-<body>
-    <div>
-        <a href="https://git.io/typing-svg"><img width=100% src="https://readme-typing-svg.herokuapp.com?font=Bytesized&pause=1000&color=D85C63&center=true&vCenter=true&repeat=false&width=500&lines=Bem-vindo+%C3%A0+minha+P%C3%A1gina+GitHub" alt="Typing SVG" /></a>
-    </div>
-    <div>
-        <h2> Um pouco sobre o Vinícius ⭐ </h2>
-        <p>Sou um programador iniciante, atualmente estudando no ensino médio da escola <a href="https://br.linkedin.com/school/institutojef/">Germinare Tech</a> <br>
-        ... btw I use Arch</p>
-        <p>Confira também meu blog :) <br>
-        <a href="https://shhiaa.github.io/ChiriviaBlog/"><img align="middle" src="https://tinyurl.com/3e5auknj"></a></p>
-    </div>
-    <div>
-        <h2> Meus focos principais no estudo 📓 </h2>
-        <ul>
-            <li><img align=top alt="Static Badge" src="https://img.shields.io/badge/HTML-blue?style=for-the-badge"><img align=top alt="Static Badge" src="https://img.shields.io/badge/CSS-orange?style=for-the-badge"></li>
-        </ul>
-        <ul>
-            <li><img align=top alt="Static Badge" src="https://img.shields.io/badge/Python-yellow?style=for-the-badge"></li>
-        </ul>
-        <ul>
-            <li><img align=top alt="Static Badge" src="https://img.shields.io/badge/Java-purple?style=for-the-badge"></li>
-        </ul>
-        <ul>
-            <li><img align=top alt="Static Badge" src="https://img.shields.io/badge/bash-4EAA25?style=for-the-badge"></li>
-        </ul>
-        <ul>
-            <li><img align=top alt="Static Badge" src="https://img.shields.io/badge/Git-F05032?style=for-the-badge"></li>
-        </ul>
-    </div>
-    <div>
-        <h2> Minhas estatísticas GitHub ⚙️</h2>
-        <img alt="Estátisticas super cool" src="https://github-readme-stats.vercel.app/api?username=Vini-Boas&show_icons=true&title_color=ebf1f7&text_color=ebf1f7&icon_color=c7424b&bg_color=0d1117&border_color=0d1117&locale=pt-br">
-        <img align="top" alt="Estátisticas super cool" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Vini-Boas&title_color=ebf1f7&text_color=ebf1f7&bg_color=0d1117&border_color=0d1117&locale=pt-br&layout=compact">
-    </div>
-    <div>
-        <h2> Projetos em andamento 📁 </h2>
-        <ul>
-            <li><a href="https://www.instagram.com/sinara.oficial/"><img align=middle alt="Chirivia" src="https://tinyurl.com/2hekfv9e"></a></li>
-        </ul>
-    </div>
-    <div>
-        <h2> Onde me encontrar 🔗 </h2>
-        <a href="https://www.instagram.com/vinicius_v_boas/"><img alt="Instagram" src="https://img.shields.io/badge/Instagram-FF0069?style=flat-square&logo=instagram&logoColor=white"></a>
-        <a href="https://github.com/Vini-Boas"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white"></a>
-    </div>
-</body>
+<a href="https://git.io/typing-svg"><img width="100%" src="https://readme-typing-svg.demolab.com?font=Bytesized&pause=1000&color=D85C63&center=true&vCenter=true&repeat=false&width=500&lines=Bem-vindo+%C3%A0+minha+P%C3%A1gina+GitHub" alt="Typing SVG"/></a>
+
+## Um pouco sobre o Vinícius ⭐
+
+Desenvolvedor fullstack no **PicPay** 💚 e estudante do ensino médio na [Germinare Tech](https://br.linkedin.com/school/institutojef/).
+
+... btw I use Arch
+
+Confira também o meu blog :)
+
+<a href="https://shhiaa.github.io/ChiriviaBlog/"><img alt="Chirivia Blog" src="https://img.shields.io/badge/Blog-Chirivia-681c22?style=for-the-badge"/></a>
+
+## Minha stack 🧰
+
+<p>
+  <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java"/>
+  <img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white" alt="Spring"/>
+  <img src="https://img.shields.io/badge/APIs_HTTP-0096D6?style=for-the-badge&logo=fastapi&logoColor=white" alt="APIs HTTP"/>
+  <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white" alt="Kotlin"/>
+  <img src="https://img.shields.io/badge/Jetpack_Compose-4285F4?style=for-the-badge&logo=jetpackcompose&logoColor=white" alt="Jetpack Compose"/>
+  <img src="https://img.shields.io/badge/Android-34A853?style=for-the-badge&logo=android&logoColor=white" alt="Android"/>
+</p>
+
+## Estudando agora 📓
+
+<p>
+  <img src="https://img.shields.io/badge/Rust-B7410E?style=for-the-badge&logo=rust&logoColor=white" alt="Rust"/>
+  <img src="https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=black" alt="C"/>
+  <img src="https://img.shields.io/badge/Estruturas_de_Dados-681c22?style=for-the-badge&logo=thealgorithms&logoColor=white" alt="Estruturas de Dados"/>
+  <img src="https://img.shields.io/badge/Arquitetura_de_Software-D85C63?style=for-the-badge&logo=diagramsdotnet&logoColor=white" alt="Arquitetura de Software"/>
+</p>
+
+## Minhas estatísticas GitHub ⚙️
+
+<p>
+  <img src="./assets/stats.svg" alt="Estatísticas GitHub"/>
+  <img align="top" src="./assets/top-langs.svg" alt="Linguagens mais usadas"/>
+</p>
+
+## Projetos escolares 🏫
+
+<!-- Tabela gerada por scripts/update_projects.py a partir de scripts/projects.json -->
+<!-- PROJECTS:START -->
+<table>
+  <tr>
+    <td align="center" width="180">
+      <a href="https://github.com/AetherGases"><img src="./assets/AetherGases.svg" height="56" alt="AetherGases"/><br/><b>AetherGases</b></a><br/>
+      <sub>Inventário de GEE</sub><br/>
+      <sub>📱 Mobile Android · Auth</sub><br/>
+      <sub>153 commits</sub>
+    </td>
+    <td align="center" width="180">
+      <a href="https://github.com/Sinara-project"><img src="./assets/Sinara-project.svg" height="56" alt="Sinara-project"/><br/><b>Sinara-project</b></a><br/>
+      <sub>Gestão industrial</sub><br/>
+      <sub>☕ Backend Java</sub><br/>
+      <sub>43 commits</sub>
+    </td>
+    <td align="center" width="180">
+      <a href="https://github.com/Brinka-Dolls"><img src="./assets/Brinka-Dolls.svg" height="56" alt="Brinka-Dolls"/><br/><b>Brinka-Dolls</b></a><br/>
+      <sub>E-commerce acessível</sub><br/>
+      <sub>☕ Backend Java</sub><br/>
+      <sub>87 commits</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="180">
+      <a href="https://github.com/fintech-hr-project"><img src="./assets/fintech-hr-project.svg" height="56" alt="fintech-hr-project"/><br/><b>fintech-hr-project</b></a><br/>
+      <sub>RH para fintech</sub><br/>
+      <sub>☕ Backend Java · CI/CD</sub><br/>
+      <sub>50 commits</sub>
+    </td>
+    <td align="center" width="180">
+      <a href="https://github.com/Vidya-Inter"><img src="./assets/Vidya-Inter.svg" height="56" alt="Vidya-Inter"/><br/><b>Vidya-Inter</b></a><br/>
+      <sub>Gestão escolar</sub><br/>
+      <sub>☕ Backend Java</sub><br/>
+      <sub>80 commits</sub>
+    </td>
+  </tr>
+</table>
+<!-- PROJECTS:END -->
+
+## Onde me encontrar 🔗
+
+<a href="https://www.instagram.com/vinicius_v_boas/"><img alt="Instagram" src="https://img.shields.io/badge/Instagram-FF0069?style=flat-square&logo=instagram&logoColor=white"/></a>
+<a href="https://github.com/Vini-Boas"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white"/></a>
