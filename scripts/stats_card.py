@@ -82,11 +82,18 @@ level, percentile = rank_of()
 title = f"Estatísticas de {user['name'] or user['login']}"
 
 width, height = 360, 200
-circ = 2 * math.pi * 36
+# Margens iguais: borda esquerda, entre funil e anel, e borda direita (PAD).
+PAD, RING_R, RING_STROKE = 25, 34, 6
+RING_OUTER = RING_R + RING_STROKE / 2
+circ = 2 * math.pi * RING_R
 ring = circ * max(0.05, (100 - percentile) / 100)
 
 # Largura de cada faixa em escala logarítmica (5 vs 475 ficaria ilegível em escala linear).
-FUNNEL_CX, MIN_W, MAX_W, SEG_H, GAP, TOP = 135, 110, 220, 30, 4, 52
+MAX_W = width - 3 * PAD - 2 * RING_OUTER
+MIN_W = MAX_W / 2
+FUNNEL_CX = PAD + MAX_W / 2
+RING_CX = width - PAD - RING_OUTER
+SEG_H, GAP, TOP = 30, 4, 52
 widths = [
     MIN_W + (MAX_W - MIN_W) * math.log1p(v) / math.log1p(max(v for _, v in rows) or 1)
     for _, v in rows
@@ -115,8 +122,8 @@ svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{heigh
 .s1 {{ fill: #c7424b; }}
 .s2 {{ fill: #a8323b; }}
 .s3 {{ fill: #681c22; }}
-.track {{ stroke: #d0d7de; stroke-width: 6; fill: none; }}
-.ring {{ stroke: #c7424b; stroke-width: 6; stroke-linecap: round; fill: none; }}
+.track {{ stroke: #d0d7de; stroke-width: {RING_STROKE}; fill: none; }}
+.ring {{ stroke: #c7424b; stroke-width: {RING_STROKE}; stroke-linecap: round; fill: none; }}
 .rank {{ font: 800 24px 'Segoe UI', Ubuntu, Sans-Serif; fill: #681c22; }}
 @media (prefers-color-scheme: dark) {{
   .card {{ fill: #0d1117; stroke: #0d1117; }}
@@ -129,9 +136,9 @@ svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{heigh
 <rect class="card" x="0.5" y="0.5" rx="4.5" width="{width - 1}" height="{height - 1}"/>
 <text x="25" y="35" class="header">{escape(title)}</text>
 {lines}
-<g transform="translate(305,118)">
-<circle r="36" class="track"/>
-<circle r="36" class="ring" stroke-dasharray="{ring:.1f} {circ:.1f}" transform="rotate(-90)"/>
+<g transform="translate({RING_CX:.1f},118)">
+<circle r="{RING_R}" class="track"/>
+<circle r="{RING_R}" class="ring" stroke-dasharray="{ring:.1f} {circ:.1f}" transform="rotate(-90)"/>
 <text y="9" text-anchor="middle" class="rank">{escape(level)}</text>
 </g>
 </svg>
