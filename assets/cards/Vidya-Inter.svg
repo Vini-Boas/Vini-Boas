@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="120" viewBox="0 0 400 120" fill="none" role="img" aria-labelledby="t">
+<title id="t">Vidya-Inter</title>
+<style>
+.card { fill: #ffffff; stroke: #d0d7de; }
+.name { font: 600 17px 'Segoe UI', Ubuntu, Sans-Serif; fill: #681c22; }
+.line { font: 400 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #1f2328; }
+.commits { font: 600 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #c7424b; }
+@media (prefers-color-scheme: dark) {
+  .card { fill: #0d1117; stroke: #30363d; }
+  .name { fill: #ebf1f7; }
+  .line { fill: #ebf1f7; }
+  .commits { fill: #D85C63; }
+}
+</style>
+<rect class="card" x="0.5" y="0.5" rx="6" width="399" height="119"/>
+<image x="20" y="20" width="80" height="80" preserveAspectRatio="xMidYMid meet" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDYiIGhlaWdodD0iNDQiIHZpZXdCb3g9IjAgMCA0NiA0NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIzIDQyLjAwMjdDMjYuODcxOCAzOC45MTcyIDMxLjg1MDIgMzcuMjIxMyAzNy4wMDA3IDM3LjIzMzVDNDAuMjgwOSAzNy4yMzM1IDQxLjkyMSAzNy4yMzM1IDQyLjY0NTUgMzYuODEzOEM0My4wODAyIDM2LjU2MDEgNDMuMjU2NiAzNi4zOTc5IDQzLjUzNTkgMzYuMDAzQzQ0IDM1LjM0NDkgNDQgMzQuMTcxNyA0NCAzMS44MjE0VjE2LjA2NEM0NCAxMy4zMzk4IDQ0IDExLjk3OTYgNDIuODQ3MSAxMC44NzUxQzQxLjY5NDIgOS43NzA1NiA0MC4wNTgzIDkuNjg0NzEgMzcuNyA5LjU3MDI1IiBzdHJva2Utd2lkdGg9IjQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8cGF0aCBkPSJNMjIuODA1IDIzLjE3OTJDMjIuODA1IDIzLjE3OTIgMjQuNTI5NyAzLjY3MjQ5IDM0LjI2MDIgMi4wNDA0OEMzNS45NTc4IDEuNzU0NDggMzcuMzY4NCAzLjEzMjQ5IDM3LjM2ODQgNC43ODg1VjI5LjAxNDZDMzcuMzY4NCAzMC4xMTg2IDM2LjQzMjIgMzAuOTk4NiAzNS4yODc5IDMxLjEyMDZDMjQuNjUwNCAzMi4yNTY2IDIyLjgwNSA0Mi4wMDI3IDIyLjgwNSA0Mi4wMDI3TTIyLjgwNSAyMy4xNzkyVjQyLjAwMjdNMjIuODA1IDIzLjE3OTJDMTguOTk1NiAxOS45NTMxIDE0LjA1MjMgNy45OTY1MSA4LjkzNDI5IDguMDAyNTFDOC41NTAwOSA4LjAwMjUxIDguMTY4NjcgOC4wMTI1MSA3Ljc5MDAyIDguMDMyNTFDNS40NTE1NCA4LjE1MDUxIDQuMjgyMyA4LjIxMDUxIDMuMTQyMTkgOS4zNjg1MkMyIDEwLjUyNjUgMiAxMS45NTI1IDIgMTQuODA4NVYzMS4zMjg2QzIgMzMuNzkyNiAyIDM1LjAyMjYgMi40NTk3OSAzNS43MTI2QzIuNjcxMTUgMzYuMDY1NSAyLjk3NTM4IDM2LjM1ODYgMy4zNDE5MiAzNi41NjI3QzQuMDU5NjkgMzcuMDAyNyA1LjY4NDU2IDM3LjAwMjcgOC45MzQyOSAzNy4wMDI3QzE0LjAzNyAzNi45ODk5IDE4Ljk2OTEgMzguNzY3OCAyMi44MDUgNDIuMDAyNyIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICAgIDxzdHlsZT4KICAgICAgICAqIHsKICAgICAgICAgICAgc3Ryb2tlOiAjMDAwMDAwCiAgICAgICAgfQogICAgICAgIEBtZWRpYSAocHJlZmVycy1jb2xvci1zY2hlbWU6IGRhcmspewogICAgICAgICAgICAqIHsKICAgICAgICAgICAgIHN0cm9rZTogI0ZFRUJFQgogICAgICAgICAgICB9CiAgICAgICAgfQogICAgPC9zdHlsZT4KPC9zdmc+Cg=="/>
+<text x="120" y="38" class="name">Vidya-Inter</text>
+<text x="120" y="60" class="line">Gestão escolar</text>
+<text x="120" y="78" class="line">☕ Backend Java</text>
+<text x="120" y="99" class="commits">80 commits</text>
+</svg>
