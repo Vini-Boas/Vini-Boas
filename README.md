@@ -41,44 +41,15 @@ Confira também o meu blog :)
 
 ## Projetos escolares 🏫
 
-<!-- Tabela gerada por scripts/update_projects.py a partir de scripts/projects.json -->
+<!-- Cartões gerados por scripts/update_projects.py a partir de scripts/projects.json -->
 <!-- PROJECTS:START -->
-<table>
-  <tr>
-    <td align="center" width="180">
-      <a href="https://github.com/AetherGases"><img src="./assets/AetherGases.svg" height="56" alt="AetherGases"/><br/><b>AetherGases</b></a><br/>
-      <sub>Inventário de GEE</sub><br/>
-      <sub>📱 Mobile Android · Auth</sub><br/>
-      <sub>177 commits</sub>
-    </td>
-    <td align="center" width="180">
-      <a href="https://github.com/Sinara-project"><img src="./assets/Sinara-project.svg" height="56" alt="Sinara-project"/><br/><b>Sinara-project</b></a><br/>
-      <sub>Gestão industrial</sub><br/>
-      <sub>☕ Backend Java</sub><br/>
-      <sub>43 commits</sub>
-    </td>
-    <td align="center" width="180">
-      <a href="https://github.com/Brinka-Dolls"><img src="./assets/Brinka-Dolls.svg" height="56" alt="Brinka-Dolls"/><br/><b>Brinka-Dolls</b></a><br/>
-      <sub>E-commerce acessível</sub><br/>
-      <sub>☕ Backend Java</sub><br/>
-      <sub>87 commits</sub>
-    </td>
-  </tr>
-  <tr>
-    <td align="center" width="180">
-      <a href="https://github.com/fintech-hr-project"><img src="./assets/fintech-hr-project.svg" height="56" alt="fintech-hr-project"/><br/><b>fintech-hr-project</b></a><br/>
-      <sub>RH para fintech</sub><br/>
-      <sub>☕ Backend Java · CI/CD</sub><br/>
-      <sub>50 commits</sub>
-    </td>
-    <td align="center" width="180">
-      <a href="https://github.com/Vidya-Inter"><img src="./assets/Vidya-Inter.svg" height="56" alt="Vidya-Inter"/><br/><b>Vidya-Inter</b></a><br/>
-      <sub>Gestão escolar</sub><br/>
-      <sub>☕ Backend Java</sub><br/>
-      <sub>80 commits</sub>
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <a href="https://github.com/AetherGases"><img src="./assets/cards/AetherGases.svg" width="400" alt="AetherGases"/></a>
+  <a href="https://github.com/Sinara-project"><img src="./assets/cards/Sinara-project.svg" width="400" alt="Sinara-project"/></a>
+  <a href="https://github.com/Brinka-Dolls"><img src="./assets/cards/Brinka-Dolls.svg" width="400" alt="Brinka-Dolls"/></a>
+  <a href="https://github.com/fintech-hr-project"><img src="./assets/cards/fintech-hr-project.svg" width="400" alt="fintech-hr-project"/></a>
+  <a href="https://github.com/Vidya-Inter"><img src="./assets/cards/Vidya-Inter.svg" width="400" alt="Vidya-Inter"/></a>
+</p>
 <!-- PROJECTS:END -->
 
 ## Onde me encontrar 🔗
