@@ -99,9 +99,8 @@ langs = [(n, v / total * 100) for n, v in top]
 
 
 def render():
-    width, bar_w = 300, 250
-    rows = (len(langs) + 1) // 2
-    height = 90 + rows * 25
+    # Mesmo tamanho do cartão de estatísticas (360x200); 8 linguagens = 4 linhas cabem.
+    width, height, bar_w = 360, 200, 310
     bar, x = [], 0.0
     for name, pct in langs:
         w = bar_w * pct / 100
@@ -109,7 +108,7 @@ def render():
         x += w
     legend = []
     for i, (name, pct) in enumerate(langs):
-        lx, ly = (i % 2) * 150, (i // 2) * 25
+        lx, ly = (i % 2) * 155, (i // 2) * 25
         legend.append(
             f'<g transform="translate({lx},{ly})"><circle cx="5" cy="6" r="5" fill="{colors[name]}"/>'
             f'<text x="15" y="10" class="lang">{escape(name)} {pct:.2f}%</text></g>'
