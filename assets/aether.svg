@@ -1,4 +1,4 @@
-<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="644" height="455" viewBox="181 286 644 455" fill="none" xmlns="http://www.w3.org/2000/svg">
 <style>
   .theme-dark { display: none; }
   @media (prefers-color-scheme: dark) {
@@ -6,7 +6,7 @@
     .theme-dark { display: inline; }
   }
 </style>
-<g class="theme-light">
+<g class="theme-light" transform="translate(0 -16.1)">
 
 <g filter="url(#filter0_dddd_3177_1027)">
 <path d="M775.714 655.746C775.938 654.467 776.142 653.199 776.325 651.94C770.734 666.148 754.317 674.351 746.808 676.677C743.792 684.87 734.515 700.637 718.592 709.95C743.315 698.181 775.714 655.746 775.714 655.746Z" fill="#359270"/>
