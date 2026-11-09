@@ -6,13 +6,24 @@
 .stat { font: 400 13px 'Segoe UI', Ubuntu, Sans-Serif; fill: #1f2328; }
 .bold { font-weight: 700; }
 .dot { fill: #c7424b; }
+.track { stroke: #d0d7de; stroke-width: 6; fill: none; }
+.ring { stroke: #c7424b; stroke-width: 6; stroke-linecap: round; fill: none; }
+.rank { font: 800 24px 'Segoe UI', Ubuntu, Sans-Serif; fill: #681c22; }
 @media (prefers-color-scheme: dark) {
   .card { fill: #0d1117; stroke: #0d1117; }
   .header { fill: #ebf1f7; }
   .stat { fill: #ebf1f7; }
+  .track { stroke: #30363d; }
+  .ring { stroke: #D85C63; }
+  .rank { fill: #ebf1f7; }
 }
 </style>
 <rect class="card" x="0.5" y="0.5" rx="4.5" width="359" height="199"/>
 <text x="25" y="35" class="header">Estatísticas de Vinícius Vilas Boas</text>
-<g transform="translate(25,65)"><circle cx="5" cy="-4" r="4" class="dot"/><text x="18" class="stat">Total de estrelas</text><text x="310" text-anchor="end" class="stat bold">5</text></g><g transform="translate(25,90)"><circle cx="5" cy="-4" r="4" class="dot"/><text x="18" class="stat">Commits (último ano)</text><text x="310" text-anchor="end" class="stat bold">475</text></g><g transform="translate(25,115)"><circle cx="5" cy="-4" r="4" class="dot"/><text x="18" class="stat">Pull requests</text><text x="310" text-anchor="end" class="stat bold">202</text></g><g transform="translate(25,140)"><circle cx="5" cy="-4" r="4" class="dot"/><text x="18" class="stat">Issues</text><text x="310" text-anchor="end" class="stat bold">55</text></g><g transform="translate(25,165)"><circle cx="5" cy="-4" r="4" class="dot"/><text x="18" class="stat">Contribuiu para</text><text x="310" text-anchor="end" class="stat bold">33</text></g>
+<g transform="translate(25,65)"><circle cx="5" cy="-4" r="4" class="dot"/><text x="18" class="stat">Total de estrelas</text><text x="235" text-anchor="end" class="stat bold">5</text></g><g transform="translate(25,90)"><circle cx="5" cy="-4" r="4" class="dot"/><text x="18" class="stat">Commits (último ano)</text><text x="235" text-anchor="end" class="stat bold">483</text></g><g transform="translate(25,115)"><circle cx="5" cy="-4" r="4" class="dot"/><text x="18" class="stat">Pull requests</text><text x="235" text-anchor="end" class="stat bold">205</text></g><g transform="translate(25,140)"><circle cx="5" cy="-4" r="4" class="dot"/><text x="18" class="stat">Issues</text><text x="235" text-anchor="end" class="stat bold">55</text></g><g transform="translate(25,165)"><circle cx="5" cy="-4" r="4" class="dot"/><text x="18" class="stat">Contribuiu para</text><text x="235" text-anchor="end" class="stat bold">33</text></g>
+<g transform="translate(300,110)">
+<circle r="36" class="track"/>
+<circle r="36" class="ring" stroke-dasharray="131.8 226.2" transform="rotate(-90)"/>
+<text y="9" text-anchor="middle" class="rank">B+</text>
+</g>
 </svg>
