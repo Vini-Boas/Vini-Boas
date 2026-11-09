@@ -28,27 +28,8 @@ jobs:
             exit 1
           fi
 
-      - name: Prepare build dir
-        run: mkdir -p build assets
-
-      - name: Stats card (dark)
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&show_icons=true&title_color=ebf1f7&text_color=ebf1f7&icon_color=c7424b&bg_color=0d1117&border_color=0d1117&locale=pt-br
-          path: build/stats-dark.svg
-          token: ${{ secrets.STATS_TOKEN }}
-
-      - name: Stats card (light)
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&show_icons=true&title_color=681c22&text_color=1f2328&icon_color=c7424b&bg_color=ffffff&border_color=d0d7de&locale=pt-br
-          path: build/stats-light.svg
-          token: ${{ secrets.STATS_TOKEN }}
-
-      - name: Merge stats card into one theme-aware SVG
-        run: python3 scripts/merge_themes.py build/stats-dark.svg build/stats-light.svg assets/stats.svg
+      - name: Stats card
+        run: python3 scripts/stats_card.py assets/stats.svg
 
       - name: Top languages card (incl. org repos)
         run: python3 scripts/top_langs.py assets/top-langs.svg
@@ -61,7 +42,7 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/stats.svg assets/top-langs.svg README.md
+          git add assets/stats.svg assets/top-langs.svg assets/cards README.md
           if git diff --cached --quiet; then
             echo "Nenhuma alteração para commitar."
             exit 0
