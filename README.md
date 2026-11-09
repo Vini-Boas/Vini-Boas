@@ -42,19 +42,19 @@ Confira também meu blog :)<br/>
 <table>
   <tr>
     <td align="center" width="180">
-      <a href="https://github.com/AetherGases"><img src="https://github.com/AetherGases.png" width="56" alt="AetherGases"/><br/><b>AetherGases</b></a><br/>
+      <a href="https://github.com/AetherGases"><img src="./assets/aether.svg" height="56" alt="AetherGases"/><br/><b>AetherGases</b></a><br/>
       <sub>Inventário de GEE</sub><br/>
       <sub>📱 Mobile Android · Auth</sub><br/>
       <sub>153 commits</sub>
     </td>
     <td align="center" width="180">
-      <a href="https://github.com/Sinara-project"><img src="https://github.com/Sinara-project.png" width="56" alt="Sinara-Project"/><br/><b>Sinara-Project</b></a><br/>
+      <a href="https://github.com/Sinara-project"><img src="./assets/sinara.svg" height="56" alt="Sinara-Project"/><br/><b>Sinara-Project</b></a><br/>
       <sub>Gestão industrial</sub><br/>
       <sub>☕ Backend Java</sub><br/>
       <sub>43 commits</sub>
     </td>
     <td align="center" width="180">
-      <a href="https://github.com/Brinka-Dolls"><img src="https://github.com/Brinka-Dolls.png" width="56" alt="Brinka-Dolls"/><br/><b>Brinka-Dolls</b></a><br/>
+      <a href="https://github.com/Brinka-Dolls"><img src="./assets/brinka.svg" height="56" alt="Brinka-Dolls"/><br/><b>Brinka-Dolls</b></a><br/>
       <sub>E-commerce acessível</sub><br/>
       <sub>☕ Backend Java</sub><br/>
       <sub>87 commits</sub>
@@ -62,13 +62,13 @@ Confira também meu blog :)<br/>
   </tr>
   <tr>
     <td align="center" width="180">
-      <a href="https://github.com/fintech-hr-project"><img src="https://github.com/fintech-hr-project.png" width="56" alt="fintech-hr-project"/><br/><b>fintech-hr-project</b></a><br/>
+      <a href="https://github.com/fintech-hr-project"><img src="./assets/pitaia.svg" height="56" alt="fintech-hr-project"/><br/><b>fintech-hr-project</b></a><br/>
       <sub>RH para fintech</sub><br/>
       <sub>☕ Backend Java · CI/CD</sub><br/>
       <sub>50 commits</sub>
     </td>
     <td align="center" width="180">
-      <a href="https://github.com/Vidya-Inter"><img src="https://github.com/Vidya-Inter.png" width="56" alt="Vidya-Inter"/><br/><b>Vidya-Inter</b></a><br/>
+      <a href="https://github.com/Vidya-Inter"><img src="./assets/vidya.svg" height="56" alt="Vidya-Inter"/><br/><b>Vidya-Inter</b></a><br/>
       <sub>Gestão escolar</sub><br/>
       <sub>☕ Backend Java</sub><br/>
       <sub>80 commits</sub>
