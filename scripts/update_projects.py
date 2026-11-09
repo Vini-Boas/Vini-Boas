@@ -1,11 +1,15 @@
-"""Regenera a tabela de projetos do README a partir de scripts/projects.json.
+"""Gera um cartão SVG por projeto (assets/cards/<org>.svg) e atualiza a lista no README.
 
-- Imagem: assets/<org>.svg se existir, senão o avatar da própria org.
+- Logo: assets/logos/<org>.svg se existir, senão o avatar da própria org.
 - Commits: total de commits do utilizador em repositórios da org (search API).
+- Os cartões são imagens de largura fixa dentro de um <p>, por isso quebram
+  naturalmente de linha conforme a largura do ecrã (sem tabela).
 """
+import base64
 import json
 import re
-import sys
+import urllib.error
+import urllib.request
 from html import escape
 from pathlib import Path
 
@@ -13,8 +17,9 @@ from common import env, fail, github
 
 ROOT = Path(__file__).resolve().parent.parent
 README = ROOT / "README.md"
+CARDS = ROOT / "assets" / "cards"
 START, END = "<!-- PROJECTS:START -->", "<!-- PROJECTS:END -->"
-COLUMNS = 3
+CARD_W, CARD_H, LOGO = 400, 120, 80
 
 user, token = env("GH_USER"), env("GH_TOKEN")
 projects = json.loads((ROOT / "scripts" / "projects.json").read_text(encoding="utf-8"))
@@ -33,30 +38,58 @@ def commits(org):
     return total
 
 
-def cell(p):
+def logo_data_uri(org):
+    local = ROOT / "assets" / "logos" / f"{org}.svg"
+    if local.exists():
+        return "data:image/svg+xml;base64," + base64.b64encode(local.read_bytes()).decode()
+    url = f"https://github.com/{org}.png?size=160"
+    try:
+        with urllib.request.urlopen(url, timeout=30) as r:
+            return "data:image/png;base64," + base64.b64encode(r.read()).decode()
+    except (urllib.error.URLError, OSError) as e:
+        fail(f"Sem logo em assets/logos/{org}.svg e não foi possível baixar o avatar ({url}): {e}")
+
+
+def card_svg(p, n_commits):
+    org = escape(p["org"])
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="{CARD_W}" height="{CARD_H}" viewBox="0 0 {CARD_W} {CARD_H}" fill="none" role="img" aria-labelledby="t">
+<title id="t">{org}</title>
+<style>
+.card {{ fill: #ffffff; stroke: #d0d7de; }}
+.name {{ font: 600 17px 'Segoe UI', Ubuntu, Sans-Serif; fill: #681c22; }}
+.line {{ font: 400 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #1f2328; }}
+.commits {{ font: 600 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #c7424b; }}
+@media (prefers-color-scheme: dark) {{
+  .card {{ fill: #0d1117; stroke: #30363d; }}
+  .name {{ fill: #ebf1f7; }}
+  .line {{ fill: #ebf1f7; }}
+  .commits {{ fill: #D85C63; }}
+}}
+</style>
+<rect class="card" x="0.5" y="0.5" rx="6" width="{CARD_W - 1}" height="{CARD_H - 1}"/>
+<image x="20" y="{(CARD_H - LOGO) // 2}" width="{LOGO}" height="{LOGO}" preserveAspectRatio="xMidYMid meet" href="{logo_data_uri(p['org'])}"/>
+<text x="120" y="38" class="name">{org}</text>
+<text x="120" y="60" class="line">{escape(p['tagline'])}</text>
+<text x="120" y="78" class="line">{escape(p['tags'])}</text>
+<text x="120" y="99" class="commits">{n_commits} commits</text>
+</svg>
+"""
+
+
+CARDS.mkdir(parents=True, exist_ok=True)
+items = []
+for p in projects:
     org = p["org"]
-    asset = ROOT / "assets" / f"{org}.svg"
-    src = f"./assets/{org}.svg" if asset.exists() else f"https://github.com/{org}.png"
-    return (
-        '    <td align="center" width="180">\n'
-        f'      <a href="https://github.com/{org}"><img src="{src}" height="56" alt="{escape(org)}"/>'
-        f"<br/><b>{escape(org)}</b></a><br/>\n"
-        f'      <sub>{escape(p["tagline"])}</sub><br/>\n'
-        f'      <sub>{escape(p["tags"])}</sub><br/>\n'
-        f"      <sub>{commits(org)} commits</sub>\n"
-        "    </td>\n"
+    (CARDS / f"{org}.svg").write_text(card_svg(p, commits(org)), encoding="utf-8")
+    items.append(
+        f'  <a href="https://github.com/{org}"><img src="./assets/cards/{org}.svg" '
+        f'width="{CARD_W}" alt="{escape(org)}"/></a>'
     )
-
-
-rows = []
-for i in range(0, len(projects), COLUMNS):
-    chunk = projects[i : i + COLUMNS]
-    rows.append("  <tr>\n" + "".join(cell(p) for p in chunk) + "  </tr>\n")
-table = f"<table>\n{''.join(rows)}</table>"
+block = '<p align="center">\n' + "\n".join(items) + "\n</p>"
 
 text = README.read_text(encoding="utf-8")
 pattern = re.compile(re.escape(START) + r".*?" + re.escape(END), re.S)
 if not pattern.search(text):
     fail(f"README.md não tem os marcadores {START} / {END}.")
-README.write_text(pattern.sub(lambda _: f"{START}\n{table}\n{END}", text), encoding="utf-8")
-print(f"{len(projects)} projetos atualizados")
+README.write_text(pattern.sub(lambda _: f"{START}\n{block}\n{END}", text), encoding="utf-8")
+print(f"{len(projects)} cartões gerados")
