@@ -4,11 +4,13 @@
 
 ## Um pouco sobre o Vinícius ⭐
 
-Sou um programador iniciante, atualmente estudando no ensino médio da escola <a href="https://br.linkedin.com/school/institutojef/">Germinare Tech</a>.<br/>
+Desenvolvedor fullstack no **PicPay** 💚 e estudante do ensino médio na [Germinare Tech](https://br.linkedin.com/school/institutojef/).
+
 ... btw I use Arch
 
-Confira também meu blog :)<br/>
-<a href="https://shhiaa.github.io/ChiriviaBlog/"><img align="middle" src="https://tinyurl.com/3e5auknj" alt="Chirivia Blog"/></a>
+Confira também o meu blog :)
+
+<a href="https://shhiaa.github.io/ChiriviaBlog/"><img alt="Chirivia Blog" src="https://img.shields.io/badge/Blog-Chirivia-681c22?style=for-the-badge"/></a>
 
 ## Minha stack 🧰
 
@@ -33,28 +35,30 @@ Confira também meu blog :)<br/>
 ## Minhas estatísticas GitHub ⚙️
 
 <p>
-  <img src="./profile/stats.svg" alt="Estatísticas GitHub"/>
-  <img align="top" src="./profile/top-langs.svg" alt="Linguagens mais usadas"/>
+  <img src="./assets/stats.svg" alt="Estatísticas GitHub"/>
+  <img align="top" src="./assets/top-langs.svg" alt="Linguagens mais usadas"/>
 </p>
 
 ## Projetos escolares 🏫
 
+<!-- Tabela gerada por scripts/update_projects.py a partir de scripts/projects.json -->
+<!-- PROJECTS:START -->
 <table>
   <tr>
     <td align="center" width="180">
-      <a href="https://github.com/AetherGases"><img src="./assets/aether.svg" height="56" alt="AetherGases"/><br/><b>AetherGases</b></a><br/>
+      <a href="https://github.com/AetherGases"><img src="./assets/AetherGases.svg" height="56" alt="AetherGases"/><br/><b>AetherGases</b></a><br/>
       <sub>Inventário de GEE</sub><br/>
       <sub>📱 Mobile Android · Auth</sub><br/>
       <sub>153 commits</sub>
     </td>
     <td align="center" width="180">
-      <a href="https://github.com/Sinara-project"><img src="./assets/sinara.svg" height="56" alt="Sinara-Project"/><br/><b>Sinara-Project</b></a><br/>
+      <a href="https://github.com/Sinara-project"><img src="./assets/Sinara-project.svg" height="56" alt="Sinara-project"/><br/><b>Sinara-project</b></a><br/>
       <sub>Gestão industrial</sub><br/>
       <sub>☕ Backend Java</sub><br/>
       <sub>43 commits</sub>
     </td>
     <td align="center" width="180">
-      <a href="https://github.com/Brinka-Dolls"><img src="./assets/brinka.svg" height="56" alt="Brinka-Dolls"/><br/><b>Brinka-Dolls</b></a><br/>
+      <a href="https://github.com/Brinka-Dolls"><img src="./assets/Brinka-Dolls.svg" height="56" alt="Brinka-Dolls"/><br/><b>Brinka-Dolls</b></a><br/>
       <sub>E-commerce acessível</sub><br/>
       <sub>☕ Backend Java</sub><br/>
       <sub>87 commits</sub>
@@ -62,19 +66,20 @@ Confira também meu blog :)<br/>
   </tr>
   <tr>
     <td align="center" width="180">
-      <a href="https://github.com/fintech-hr-project"><img src="./assets/pitaia.svg" height="56" alt="fintech-hr-project"/><br/><b>fintech-hr-project</b></a><br/>
+      <a href="https://github.com/fintech-hr-project"><img src="./assets/fintech-hr-project.svg" height="56" alt="fintech-hr-project"/><br/><b>fintech-hr-project</b></a><br/>
       <sub>RH para fintech</sub><br/>
       <sub>☕ Backend Java · CI/CD</sub><br/>
       <sub>50 commits</sub>
     </td>
     <td align="center" width="180">
-      <a href="https://github.com/Vidya-Inter"><img src="./assets/vidya.svg" height="56" alt="Vidya-Inter"/><br/><b>Vidya-Inter</b></a><br/>
+      <a href="https://github.com/Vidya-Inter"><img src="./assets/Vidya-Inter.svg" height="56" alt="Vidya-Inter"/><br/><b>Vidya-Inter</b></a><br/>
       <sub>Gestão escolar</sub><br/>
       <sub>☕ Backend Java</sub><br/>
       <sub>80 commits</sub>
     </td>
   </tr>
 </table>
+<!-- PROJECTS:END -->
 
 ## Onde me encontrar 🔗
 
