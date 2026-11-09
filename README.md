@@ -49,7 +49,7 @@ Confira também o meu blog :)
       <a href="https://github.com/AetherGases"><img src="./assets/AetherGases.svg" height="56" alt="AetherGases"/><br/><b>AetherGases</b></a><br/>
       <sub>Inventário de GEE</sub><br/>
       <sub>📱 Mobile Android · Auth</sub><br/>
-      <sub>153 commits</sub>
+      <sub>177 commits</sub>
     </td>
     <td align="center" width="180">
       <a href="https://github.com/Sinara-project"><img src="./assets/Sinara-project.svg" height="56" alt="Sinara-project"/><br/><b>Sinara-project</b></a><br/>
