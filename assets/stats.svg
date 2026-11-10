@@ -24,10 +24,10 @@
 <polygon points="64.1,52 205.9,52 225.8,82 44.2,82" class="seg s0"/><text x="135" y="71.5" text-anchor="middle" class="seg-text">5 estrelas</text>
 <polygon points="44.2,86 225.8,86 237.4,116 32.6,116" class="seg s1"/><text x="135" y="105.5" text-anchor="middle" class="seg-text">55 issues</text>
 <polygon points="32.6,120 237.4,120 245.0,150 25.0,150" class="seg s2"/><text x="135" y="139.5" text-anchor="middle" class="seg-text">206 pull requests</text>
-<polygon points="25.0,154 245.0,154 245.0,184 25.0,184" class="seg s3"/><text x="135" y="173.5" text-anchor="middle" class="seg-text">485 commits</text>
+<polygon points="25.0,154 245.0,154 245.0,184 25.0,184" class="seg s3"/><text x="135" y="173.5" text-anchor="middle" class="seg-text">488 commits</text>
 <g transform="translate(305,118)">
 <circle r="36" class="track"/>
-<circle r="36" class="ring" stroke-dasharray="131.9 226.2" transform="rotate(-90)"/>
+<circle r="36" class="ring" stroke-dasharray="132.0 226.2" transform="rotate(-90)"/>
 <text y="9" text-anchor="middle" class="rank">B+</text>
 </g>
 </svg>
