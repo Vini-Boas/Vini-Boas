@@ -86,8 +86,8 @@ Check out my blog too :)
 ## My GitHub stats ⚙️
 
 <p>
-  <img src="./assets/stats.svg" alt="GitHub stats"/>
-  <img align="top" src="./assets/top-langs.svg" alt="Most used languages"/>
+  <img src="./assets/stats.en.svg" alt="GitHub stats"/>
+  <img align="top" src="./assets/top-langs.en.svg" alt="Most used languages"/>
 </p>
 
 ## School projects 🏫

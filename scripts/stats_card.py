@@ -1,4 +1,4 @@
-"""Gera assets/stats.svg (um único SVG, claro/escuro) com as estatísticas do GitHub."""
+"""Gera assets/stats.svg (pt) e assets/stats.en.svg (en), claro/escuro, com as estatísticas do GitHub."""
 import math
 import os
 import sys
@@ -50,12 +50,12 @@ commits = cc["totalCommitContributions"] + cc["restrictedContributionsCount"]
 prs, issues = user["pullRequests"]["totalCount"], user["issues"]["totalCount"]
 reviews, followers = cc["totalPullRequestReviewContributions"], user["followers"]["totalCount"]
 # Funil, do topo (menor) à base (maior): estrelas -> issues -> PRs -> commits (último ano).
-rows = [
-    ("estrelas", stars),
-    ("issues", issues),
-    ("pull requests", prs),
-    ("commits", commits),
-]
+values = [stars, issues, prs, commits]
+LABELS = {
+    "pt": ["estrelas", "issues", "pull requests", "commits"],
+    "en": ["stars", "issues", "pull requests", "commits"],
+}
+rows = list(zip(LABELS["pt"], values))
 
 
 def rank_of():
@@ -79,7 +79,8 @@ def rank_of():
 
 
 level, percentile = rank_of()
-title = f"Estatísticas de {user['name'] or user['login']}"
+name = user["name"] or user["login"]
+TITLES = {"pt": f"Estatísticas de {name}", "en": f"{name}'s stats"}
 
 width, height = 360, 200
 circ = 2 * math.pi * 36
@@ -91,52 +92,56 @@ widths = [
     MIN_W + (MAX_W - MIN_W) * math.log1p(v) / math.log1p(max(v for _, v in rows) or 1)
     for _, v in rows
 ]
-segments = []
-for i, ((label, value), w_top) in enumerate(zip(rows, widths)):
-    w_bot = widths[i + 1] if i + 1 < len(widths) else w_top
-    y = TOP + i * (SEG_H + GAP)
-    pts = (
-        f"{FUNNEL_CX - w_top / 2:.1f},{y} {FUNNEL_CX + w_top / 2:.1f},{y} "
-        f"{FUNNEL_CX + w_bot / 2:.1f},{y + SEG_H} {FUNNEL_CX - w_bot / 2:.1f},{y + SEG_H}"
-    )
-    segments.append(
-        f'<polygon points="{pts}" class="seg s{i}"/>'
-        f'<text x="{FUNNEL_CX}" y="{y + SEG_H / 2 + 4.5}" text-anchor="middle" class="seg-text">'
-        f"{value:,} {escape(label)}</text>"
-    )
-lines = "\n".join(segments)
-svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" fill="none" role="img" aria-labelledby="t">
-<title id="t">{escape(title)}</title>
-<style>
-.card {{ fill: #ffffff; stroke: #d0d7de; }}
-.header {{ font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #681c22; }}
-.seg-text {{ font: 600 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #ffffff; }}
-.s0 {{ fill: #d85c63; }}
-.s1 {{ fill: #c7424b; }}
-.s2 {{ fill: #a8323b; }}
-.s3 {{ fill: #681c22; }}
-.track {{ stroke: #d0d7de; stroke-width: 6; fill: none; }}
-.ring {{ stroke: #c7424b; stroke-width: 6; stroke-linecap: round; fill: none; }}
-.rank {{ font: 800 24px 'Segoe UI', Ubuntu, Sans-Serif; fill: #681c22; }}
-@media (prefers-color-scheme: dark) {{
-  .card {{ fill: #0d1117; stroke: #0d1117; }}
-  .header {{ fill: #ebf1f7; }}
-  .track {{ stroke: #30363d; }}
-  .ring {{ stroke: #D85C63; }}
-  .rank {{ fill: #ebf1f7; }}
-}}
-</style>
-<rect class="card" x="0.5" y="0.5" rx="4.5" width="{width - 1}" height="{height - 1}"/>
-<text x="25" y="35" class="header">{escape(title)}</text>
-{lines}
-<g transform="translate(305,118)">
-<circle r="36" class="track"/>
-<circle r="36" class="ring" stroke-dasharray="{ring:.1f} {circ:.1f}" transform="rotate(-90)"/>
-<text y="9" text-anchor="middle" class="rank">{escape(level)}</text>
-</g>
-</svg>
-"""
+def render(lang):
+    segments = []
+    for i, ((label, value), w_top) in enumerate(zip(zip(LABELS[lang], values), widths)):
+        w_bot = widths[i + 1] if i + 1 < len(widths) else w_top
+        y = TOP + i * (SEG_H + GAP)
+        pts = (
+            f"{FUNNEL_CX - w_top / 2:.1f},{y} {FUNNEL_CX + w_top / 2:.1f},{y} "
+            f"{FUNNEL_CX + w_bot / 2:.1f},{y + SEG_H} {FUNNEL_CX - w_bot / 2:.1f},{y + SEG_H}"
+        )
+        segments.append(
+            f'<polygon points="{pts}" class="seg s{i}"/>'
+            f'<text x="{FUNNEL_CX}" y="{y + SEG_H / 2 + 4.5}" text-anchor="middle" class="seg-text">'
+            f"{value:,} {escape(label)}</text>"
+        )
+    lines = "\n".join(segments)
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" fill="none" role="img" aria-labelledby="t">
+    <title id="t">{escape(TITLES[lang])}</title>
+    <style>
+    .card {{ fill: #ffffff; stroke: #d0d7de; }}
+    .header {{ font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #681c22; }}
+    .seg-text {{ font: 600 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #ffffff; }}
+    .s0 {{ fill: #d85c63; }}
+    .s1 {{ fill: #c7424b; }}
+    .s2 {{ fill: #a8323b; }}
+    .s3 {{ fill: #681c22; }}
+    .track {{ stroke: #d0d7de; stroke-width: 6; fill: none; }}
+    .ring {{ stroke: #c7424b; stroke-width: 6; stroke-linecap: round; fill: none; }}
+    .rank {{ font: 800 24px 'Segoe UI', Ubuntu, Sans-Serif; fill: #681c22; }}
+    @media (prefers-color-scheme: dark) {{
+      .card {{ fill: #0d1117; stroke: #0d1117; }}
+      .header {{ fill: #ebf1f7; }}
+      .track {{ stroke: #30363d; }}
+      .ring {{ stroke: #D85C63; }}
+      .rank {{ fill: #ebf1f7; }}
+    }}
+    </style>
+    <rect class="card" x="0.5" y="0.5" rx="4.5" width="{width - 1}" height="{height - 1}"/>
+    <text x="25" y="35" class="header">{escape(TITLES[lang])}</text>
+    {lines}
+    <g transform="translate(305,118)">
+    <circle r="36" class="track"/>
+    <circle r="36" class="ring" stroke-dasharray="{ring:.1f} {circ:.1f}" transform="rotate(-90)"/>
+    <text y="9" text-anchor="middle" class="rank">{escape(level)}</text>
+    </g>
+    </svg>
+    """
+
+
 os.makedirs(os.path.dirname(OUT) or ".", exist_ok=True)
-with open(OUT, "w", encoding="utf-8") as f:
-    f.write(svg)
+for lang, path in (("pt", OUT), ("en", os.path.splitext(OUT)[0] + ".en.svg")):
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(render(lang))
 print(", ".join(f"{k}={v}" for k, v in rows), f"| reviews={reviews} followers={followers} rank={level} ({percentile:.1f}%)")

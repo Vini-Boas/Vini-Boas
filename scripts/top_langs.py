@@ -1,4 +1,4 @@
-"""Gera assets/top-langs.svg (um único SVG, claro/escuro) com as linguagens mais usadas,
+"""Gera assets/top-langs.svg (pt) e assets/top-langs.en.svg (en), claro/escuro, com as linguagens mais usadas,
 incluindo repositórios de organizações em que o utilizador contribuiu.
 
 Os bytes de cada linguagem em cada repo são ponderados pela fração de commits do
@@ -98,7 +98,10 @@ total = sum(v for _, v in top)
 langs = [(n, v / total * 100) for n, v in top]
 
 
-def render():
+TITLES = {"pt": "Linguagens mais usadas", "en": "Most used languages"}
+
+
+def render(lang):
     # Mesmo tamanho do cartão de estatísticas (360x200); 8 linguagens = 4 linhas cabem.
     width, height, bar_w = 360, 200, 310
     bar, x = [], 0.0
@@ -114,7 +117,7 @@ def render():
             f'<text x="15" y="10" class="lang">{escape(name)} {pct:.2f}%</text></g>'
         )
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" fill="none" role="img" aria-labelledby="t">
-<title id="t">Linguagens mais usadas</title>
+<title id="t">{TITLES[lang]}</title>
 <style>
 .card {{ fill: #ffffff; stroke: #d0d7de; }}
 .header {{ font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #681c22; }}
@@ -126,7 +129,7 @@ def render():
 }}
 </style>
 <rect class="card" x="0.5" y="0.5" rx="4.5" width="{width - 1}" height="{height - 1}"/>
-<text x="25" y="35" class="header">Linguagens mais usadas</text>
+<text x="25" y="35" class="header">{TITLES[lang]}</text>
 <g transform="translate(25,55)"><mask id="m"><rect width="{bar_w}" height="8" rx="5" fill="white"/></mask>
 <g mask="url(#m)">{''.join(bar)}</g></g>
 <g transform="translate(25,80)">{''.join(legend)}</g>
@@ -135,6 +138,7 @@ def render():
 
 
 os.makedirs(os.path.dirname(OUT) or ".", exist_ok=True)
-with open(OUT, "w", encoding="utf-8") as f:
-    f.write(render())
+for lang, path in (("pt", OUT), ("en", os.path.splitext(OUT)[0] + ".en.svg")):
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(render(lang))
 print(f"{seen} repos analisados; top: {', '.join(n for n, _ in langs)}")
