@@ -1,4 +1,6 @@
-"""Gera um cartão SVG por projeto (assets/cards/<org>.svg) e atualiza a lista nos READMEs (pt e en).
+"""Gera um cartão SVG por projeto e idioma e atualiza a lista nos READMEs.
+
+- pt: assets/cards/<org>.svg (README.md); en: assets/cards/en/<org>.svg (README.en.md).
 
 - Logo: assets/logos/<org>.svg se existir, senão o avatar da própria org.
 - Commits: total de commits do utilizador em repositórios da org (search API).
@@ -16,8 +18,11 @@ from pathlib import Path
 from common import env, fail, github
 
 ROOT = Path(__file__).resolve().parent.parent
-READMES = [ROOT / "README.md", ROOT / "README.en.md"]
-CARDS = ROOT / "assets" / "cards"
+# idioma -> (README, pasta dos cartões, chave da tagline em projects.json)
+LANGS = {
+    "pt": (ROOT / "README.md", "assets/cards", "tagline"),
+    "en": (ROOT / "README.en.md", "assets/cards/en", "tagline_en"),
+}
 START, END = "<!-- PROJECTS:START -->", "<!-- PROJECTS:END -->"
 CARD_W, CARD_H, LOGO = 400, 120, 80
 
@@ -50,7 +55,7 @@ def logo_data_uri(org):
         fail(f"Sem logo em assets/logos/{org}.svg e não foi possível baixar o avatar ({url}): {e}")
 
 
-def card_svg(p, n_commits):
+def card_svg(p, tagline, n_commits):
     org = escape(p["org"])
     return f"""<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="{CARD_W}" height="{CARD_H}" viewBox="0 0 {CARD_W} {CARD_H}" fill="none" role="img" aria-labelledby="t">
 <title id="t">{org}</title>
@@ -69,28 +74,31 @@ def card_svg(p, n_commits):
 <rect class="card" x="0.5" y="0.5" rx="6" width="{CARD_W - 1}" height="{CARD_H - 1}"/>
 <image x="20" y="{(CARD_H - LOGO) // 2}" width="{LOGO}" height="{LOGO}" preserveAspectRatio="xMidYMid meet" href="{logo_data_uri(p['org'])}"/>
 <text x="120" y="38" class="name">{org}</text>
-<text x="120" y="60" class="line">{escape(p['tagline'])}</text>
+<text x="120" y="60" class="line">{escape(tagline)}</text>
 <text x="120" y="78" class="line">{escape(p['tags'])}</text>
 <text x="120" y="99" class="commits">{n_commits} commits</text>
 </svg>
 """
 
 
-CARDS.mkdir(parents=True, exist_ok=True)
-items = []
-for p in projects:
-    org = p["org"]
-    (CARDS / f"{org}.svg").write_text(card_svg(p, commits(org)), encoding="utf-8")
-    items.append(
-        f'  <a href="https://github.com/{org}"><img src="./assets/cards/{org}.svg" '
-        f'width="{CARD_W}" alt="{escape(org)}"/></a>'
-    )
-block = '<p align="center">\n' + "\n".join(items) + "\n</p>"
-
+counts = {p["org"]: commits(p["org"]) for p in projects}
 pattern = re.compile(re.escape(START) + r".*?" + re.escape(END), re.S)
-for readme in READMES:
+
+for readme, cards_dir, key in LANGS.values():
+    (ROOT / cards_dir).mkdir(parents=True, exist_ok=True)
+    items = []
+    for p in projects:
+        org = p["org"]
+        svg = card_svg(p, p[key], counts[org])
+        (ROOT / cards_dir / f"{org}.svg").write_text(svg, encoding="utf-8")
+        items.append(
+            f'  <a href="https://github.com/{org}"><img src="./{cards_dir}/{org}.svg" '
+            f'width="{CARD_W}" alt="{escape(org)}"/></a>'
+        )
+    block = '<p align="center">\n' + "\n".join(items) + "\n</p>"
     text = readme.read_text(encoding="utf-8")
     if not pattern.search(text):
         fail(f"{readme.name} não tem os marcadores {START} / {END}.")
     readme.write_text(pattern.sub(lambda _: f"{START}\n{block}\n{END}", text), encoding="utf-8")
-print(f"{len(projects)} cartões gerados")
+
+print(f"{len(projects)} cartões gerados por idioma")
