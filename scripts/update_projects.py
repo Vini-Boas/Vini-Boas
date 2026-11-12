@@ -1,4 +1,4 @@
-"""Gera um cartão SVG por projeto (assets/cards/<org>.svg) e atualiza a lista no README.
+"""Gera um cartão SVG por projeto (assets/cards/<org>.svg) e atualiza a lista nos READMEs (pt e en).
 
 - Logo: assets/logos/<org>.svg se existir, senão o avatar da própria org.
 - Commits: total de commits do utilizador em repositórios da org (search API).
@@ -16,7 +16,7 @@ from pathlib import Path
 from common import env, fail, github
 
 ROOT = Path(__file__).resolve().parent.parent
-README = ROOT / "README.md"
+READMES = [ROOT / "README.md", ROOT / "README.en.md"]
 CARDS = ROOT / "assets" / "cards"
 START, END = "<!-- PROJECTS:START -->", "<!-- PROJECTS:END -->"
 CARD_W, CARD_H, LOGO = 400, 120, 80
@@ -87,9 +87,10 @@ for p in projects:
     )
 block = '<p align="center">\n' + "\n".join(items) + "\n</p>"
 
-text = README.read_text(encoding="utf-8")
 pattern = re.compile(re.escape(START) + r".*?" + re.escape(END), re.S)
-if not pattern.search(text):
-    fail(f"README.md não tem os marcadores {START} / {END}.")
-README.write_text(pattern.sub(lambda _: f"{START}\n{block}\n{END}", text), encoding="utf-8")
+for readme in READMES:
+    text = readme.read_text(encoding="utf-8")
+    if not pattern.search(text):
+        fail(f"{readme.name} não tem os marcadores {START} / {END}.")
+    readme.write_text(pattern.sub(lambda _: f"{START}\n{block}\n{END}", text), encoding="utf-8")
 print(f"{len(projects)} cartões gerados")
