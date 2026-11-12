@@ -42,7 +42,7 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/stats.svg assets/top-langs.svg assets/cards README.md
+          git add assets/stats.svg assets/stats.en.svg assets/top-langs.svg assets/top-langs.en.svg assets/cards README.md README.en.md
           if git diff --cached --quiet; then
             echo "Nenhuma alteração para commitar."
             exit 0
