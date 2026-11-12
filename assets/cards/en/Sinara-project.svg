@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="120" viewBox="0 0 400 120" fill="none" role="img" aria-labelledby="t">
+<title id="t">Sinara-project</title>
+<style>
+.card { fill: #ffffff; stroke: #d0d7de; }
+.name { font: 600 17px 'Segoe UI', Ubuntu, Sans-Serif; fill: #681c22; }
+.line { font: 400 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #1f2328; }
+.commits { font: 600 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #c7424b; }
+@media (prefers-color-scheme: dark) {
+  .card { fill: #0d1117; stroke: #30363d; }
+  .name { fill: #ebf1f7; }
+  .line { fill: #ebf1f7; }
+  .commits { fill: #D85C63; }
+}
+</style>
+<rect class="card" x="0.5" y="0.5" rx="6" width="399" height="119"/>
+<image x="20" y="20" width="80" height="80" preserveAspectRatio="xMidYMid meet" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAxIiBoZWlnaHQ9IjIwMSIgdmlld0JveD0iMCAwIDIwMSAyMDEiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxzdHlsZT4KICAuYWRhcHRpdmUgeyBmaWxsOiAjMEIxQjU0OyB9CiAgQG1lZGlhIChwcmVmZXJzLWNvbG9yLXNjaGVtZTogZGFyaykgeyAuYWRhcHRpdmUgeyBmaWxsOiAjRjVGNUY1OyB9IH0KPC9zdHlsZT4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzM0MjBfMzYwKSI+CjxwYXRoIGQ9Ik0xNTMuMTI1IDAuNjU3MjI3TDEzNy44NzcgMTYuMTQwNkg5OC4zNjkxQzg4LjI0MDUgMTYuMTQwNyA3OC40NjU2IDE5Ljg2OTUgNzAuOTEwMiAyNi42MTUyQzU0LjExMTEgNDEuNjE0NCA1Mi40NTYzIDY3LjMxOTIgNjcuMTkzNCA4NC4zNDg2TDExNi4xNjcgMTQwLjkzOEMxMTkuMDg0IDE0NC4zMDkgMTE4LjcxNiAxNDkuNDA2IDExNS4zNDYgMTUyLjMyMkMxMTEuOTc1IDE1NS4yMzkgMTA2Ljg3OSAxNTQuODcxIDEwMy45NjIgMTUxLjUwMUw1NC45ODkzIDk0LjkxMDJDMzQuNDgyNiA3MS4yMTM3IDM2Ljc4NSAzNS40NDYzIDYwLjE2MTEgMTQuNTc1MkM3MC42NzQ0IDUuMTg4NjMgODQuMjc1MyAzLjc0NDk3ZS0wNSA5OC4zNjkxIDBIMTUzLjEyNVYwLjY1NzIyN1oiIGZpbGw9IiNGRjc2NTUiLz4KPHBhdGggZD0iTTg1LjA0NDkgNDguNjA4NEM4OC40MTUxIDQ1LjY5MTkgOTMuNTEyMSA0Ni4wNTk3IDk2LjQyODcgNDkuNDI5N0wxNDUuNDAxIDEwNi4wMjFDMTY1LjkwOCAxMjkuNzE3IDE2My42MDYgMTY1LjQ4NCAxNDAuMjI5IDE4Ni4zNTVDMTI5LjcxNiAxOTUuNzQyIDExNi4xMTUgMjAwLjkzMSAxMDIuMDIxIDIwMC45MzFINDcuMjY1NlYyMDAuMjg0TDYyLjUyNjQgMTg0Ljc5SDEwMi4wMjFDMTEyLjE1IDE4NC43OSAxMjEuOTI1IDE4MS4wNjEgMTI5LjQ4IDE3NC4zMTVDMTQ2LjI4IDE1OS4zMTYgMTQ3LjkzNSAxMzMuNjExIDEzMy4xOTcgMTE2LjU4Mkw4NC4yMjM2IDU5Ljk5MjJDODEuMzA3MyA1Ni42MjIgODEuNjc0OCA1MS41MjQ5IDg1LjA0NDkgNDguNjA4NFoiIGNsYXNzPSJhZGFwdGl2ZSIvPgo8L2c+CjxkZWZzPgo8Y2xpcFBhdGggaWQ9ImNsaXAwXzM0MjBfMzYwIj4KPHJlY3Qgd2lkdGg9IjIwMC45MyIgaGVpZ2h0PSIyMDAuOTMiIGZpbGw9IndoaXRlIi8+CjwvY2xpcFBhdGg+CjwvZGVmcz4KPC9zdmc+Cg=="/>
+<text x="120" y="38" class="name">Sinara-project</text>
+<text x="120" y="60" class="line">Industrial management</text>
+<text x="120" y="78" class="line">☕ Backend Java</text>
+<text x="120" y="99" class="commits">43 commits</text>
+</svg>

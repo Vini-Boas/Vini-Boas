@@ -1,7 +1,7 @@
 [
-  {"org": "AetherGases",        "tagline": "Inventário de GEE",      "tags": "📱 Mobile Android · Auth"},
-  {"org": "Sinara-project",     "tagline": "Gestão industrial",      "tags": "☕ Backend Java"},
-  {"org": "Brinka-Dolls",       "tagline": "E-commerce acessível",   "tags": "☕ Backend Java"},
-  {"org": "fintech-hr-project", "tagline": "RH para fintech",        "tags": "☕ Backend Java · CI/CD"},
-  {"org": "Vidya-Inter",        "tagline": "Gestão escolar",         "tags": "☕ Backend Java"}
+  {"org": "AetherGases",         "tagline": "Inventário de GEE",       "tagline_en": "GHG inventory",           "tags": "📱 Mobile Android"},
+  {"org": "Sinara-project",      "tagline": "Gestão industrial",       "tagline_en": "Industrial management",   "tags": "☕ Backend Java"},
+  {"org": "Brinka-Dolls",        "tagline": "E-commerce acessível",    "tagline_en": "Accessible e-commerce",   "tags": "☕ Backend Java"},
+  {"org": "fintech-hr-project",  "tagline": "RH para fintech",         "tagline_en": "HR for fintech",          "tags": "☕ Backend Java · CI/CD"},
+  {"org": "Vidya-Inter",         "tagline": "Gestão escolar",          "tagline_en": "School management",       "tags": "☕ Backend Java"}
 ]
