@@ -1,33 +1,34 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="360" height="200" viewBox="0 0 360 200" fill="none" role="img" aria-labelledby="t">
-<title id="t">Vinícius Vilas Boas's stats</title>
-<style>
-.card { fill: #ffffff; stroke: #d0d7de; }
-.header { font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #681c22; }
-.seg-text { font: 600 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #ffffff; }
-.s0 { fill: #d85c63; }
-.s1 { fill: #c7424b; }
-.s2 { fill: #a8323b; }
-.s3 { fill: #681c22; }
-.track { stroke: #d0d7de; stroke-width: 6; fill: none; }
-.ring { stroke: #c7424b; stroke-width: 6; stroke-linecap: round; fill: none; }
-.rank { font: 800 24px 'Segoe UI', Ubuntu, Sans-Serif; fill: #681c22; }
-@media (prefers-color-scheme: dark) {
-  .card { fill: #0d1117; stroke: #0d1117; }
-  .header { fill: #ebf1f7; }
-  .track { stroke: #30363d; }
-  .ring { stroke: #D85C63; }
-  .rank { fill: #ebf1f7; }
-}
-</style>
-<rect class="card" x="0.5" y="0.5" rx="4.5" width="359" height="199"/>
-<text x="25" y="35" class="header">Vinícius Vilas Boas's stats</text>
-<polygon points="64.2,52 205.8,52 225.6,82 44.4,82" class="seg s0"/><text x="135" y="71.5" text-anchor="middle" class="seg-text">5 stars</text>
-<polygon points="44.4,86 225.6,86 237.5,116 32.5,116" class="seg s1"/><text x="135" y="105.5" text-anchor="middle" class="seg-text">55 issues</text>
-<polygon points="32.5,120 237.5,120 245.0,150 25.0,150" class="seg s2"/><text x="135" y="139.5" text-anchor="middle" class="seg-text">215 pull requests</text>
-<polygon points="25.0,154 245.0,154 245.0,184 25.0,184" class="seg s3"/><text x="135" y="173.5" text-anchor="middle" class="seg-text">502 commits</text>
-<g transform="translate(305,118)">
-<circle r="36" class="track"/>
-<circle r="36" class="ring" stroke-dasharray="132.7 226.2" transform="rotate(-90)"/>
-<text y="9" text-anchor="middle" class="rank">B+</text>
-</g>
-</svg>
+    <title id="t">Vinícius Vilas Boas&#x27;s stats</title>
+    <style>
+    .card { fill: #ffffff; stroke: #d0d7de; }
+    .header { font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #681c22; }
+    .seg-text { font: 600 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #ffffff; }
+    .s0 { fill: #d85c63; }
+    .s1 { fill: #c7424b; }
+    .s2 { fill: #a8323b; }
+    .s3 { fill: #681c22; }
+    .track { stroke: #d0d7de; stroke-width: 6; fill: none; }
+    .ring { stroke: #c7424b; stroke-width: 6; stroke-linecap: round; fill: none; }
+    .rank { font: 800 24px 'Segoe UI', Ubuntu, Sans-Serif; fill: #681c22; }
+    @media (prefers-color-scheme: dark) {
+      .card { fill: #0d1117; stroke: #0d1117; }
+      .header { fill: #ebf1f7; }
+      .track { stroke: #30363d; }
+      .ring { stroke: #D85C63; }
+      .rank { fill: #ebf1f7; }
+    }
+    </style>
+    <rect class="card" x="0.5" y="0.5" rx="4.5" width="359" height="199"/>
+    <text x="25" y="35" class="header">Vinícius Vilas Boas&#x27;s stats</text>
+    <polygon points="64.2,52 205.8,52 226.5,82 43.5,82" class="seg s0"/><text x="135" y="71.5" text-anchor="middle" class="seg-text">5 stars</text>
+<polygon points="43.5,86 226.5,86 237.6,116 32.4,116" class="seg s1"/><text x="135" y="105.5" text-anchor="middle" class="seg-text">61 issues</text>
+<polygon points="32.4,120 237.6,120 245.0,150 25.0,150" class="seg s2"/><text x="135" y="139.5" text-anchor="middle" class="seg-text">217 pull requests</text>
+<polygon points="25.0,154 245.0,154 245.0,184 25.0,184" class="seg s3"/><text x="135" y="173.5" text-anchor="middle" class="seg-text">505 commits</text>
+    <g transform="translate(305,118)">
+    <circle r="36" class="track"/>
+    <circle r="36" class="ring" stroke-dasharray="133.5 226.2" transform="rotate(-90)"/>
+    <text y="9" text-anchor="middle" class="rank">B+</text>
+    </g>
+    </svg>
+    
